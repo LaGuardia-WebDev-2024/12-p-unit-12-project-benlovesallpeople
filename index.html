@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Unit 12 Project
-      [x] $() Select by Element, ID AND Class
-      [x] Use Three Different jQuery Methods (.css(), .html(), .append())
-      [x] Add Five CSS Declarations
-      [x] Include Three Images (placeholders)
-      Select ONE Additional
-      [x] Feature 5 – Use .append() method
-  -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unit 12 jQuery Memory Revealer</title>
 
-  <!-- 1) jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- 2) Styles -->
   <style>
     body {
       background-color: #eef;            
       font-family: 'Segoe UI', sans-serif;
       margin: 20px;                      
-      color: #333;                       
+      color: #333;                      
     }
     h1 {
       text-align: center;                
@@ -71,41 +62,34 @@
     <p class="memory-text">Click a memory button to reveal a memory.</p>
   </div>
 
-  <!-- 3) jQuery logic -->
   <script>
-    // Element selector: add a subtle shadow to the heading
     $('h1').css('text-shadow', '1px 1px 2px #aaa');
 
-    // Three memories—each with one blank image src for you to fill
-    var memory1 = '<img src="" alt="Memory 1 image"><p>Describe your first memory here.</p>';
-    var memory2 = '<img src="" alt="Memory 2 image"><p>Describe your second memory here.</p>';
-    var memory3 = '<img src="" alt="Memory 3 image"><p>Describe your third memory here.</p>';
+    var memory1 = '<img src="https://cdn.glitch.global/b1518624-f2e8-4992-8118-06eae49299de/driving.png?v=1746126456684" alt="Learning to drive"><p>Learning to drive was so scary at first, but it was also exciting. The freedom of being in the front seat is remarkable!</p>';
+    var memory2 = '<img src="https://cdn.glitch.global/b1518624-f2e8-4992-8118-06eae49299de/bike.jpg?v=1746126461847" alt="Learning to ride a bike"><p>I will never forget learning to ride a bike for the first time! I could not stop falling, but now I love it.</p>';
+    var memory3 = '<img src="https://cdn.glitch.global/b1518624-f2e8-4992-8118-06eae49299de/sunset.jpg?v=1746126450470" alt="Watching a sunset"><p>I will never forget watching the sky light up in brilliant hues of orange, pink, and purple as the sun fell below the water. My family and I loved it.</p>';
 
-    // Button 1 handler
     $('#btn1').click(function() {
-      $(this).css('background-color', '#c63');               // .css()
+      $(this).css('background-color', '#c63');             
       $('#memory-display')
-        .html(memory1)                                       // .html()
-        .append('<p>Enjoy this memory!</p>');                 // .append()
+        .html(memory1)                                      
+        .append('<p>Thrilling!</p>');                
     });
 
-    // Button 2 handler
     $('#btn2').click(function() {
       $(this).css('background-color', '#3a6');
       $('#memory-display')
         .html(memory2)
-        .append('<p>Enjoy this memory!</p>');
+        .append('<p>Two-wheeled wonder!</p>');
     });
-
-    // Button 3 handler
+    
     $('#btn3').click(function() {
       $(this).css('background-color', '#38a');
       $('#memory-display')
         .html(memory3)
-        .append('<p>Enjoy this memory!</p>');
+        .append('<p>Stunning!</p>');
     });
 
-    // Class selector tweak
     $('.memory-text').css('font-size', '1.1em');
   </script>
 
